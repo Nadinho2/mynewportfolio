@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Nnamdi Amuchie — Inquiries for AI code evaluation, full-stack web engineering, or technical training.">
+  <title>Contact | Nnamdi Amuchie</title>
+  <link rel="stylesheet" href="../assets/styles/main.css">
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card-bg: #1e293b;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --accent: #38bdf8;
+      --accent-hover: #0ea5e9;
+      --border: #334155;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text-main);
+      line-height: 1.6;
+    }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+    a:hover {
+      color: var(--accent-hover);
+    }
+    header {
+      border-bottom: 1px solid var(--border);
+      padding: 1.25rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      background-color: rgba(15, 23, 42, 0.95);
+      backdrop-filter: blur(8px);
+      z-index: 100;
+    }
+    .brand {
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: var(--text-main);
+    }
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 1.5rem;
+    }
+    nav a {
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+    nav a:hover, nav a.active {
+      color: var(--text-main);
+    }
+    main {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem 5rem;
+    }
+    .page-intro {
+      max-width: 700px;
+      margin-bottom: 3.5rem;
+    }
+    h1 {
+      font-size: 2.5rem;
+      line-height: 1.2;
+      margin-bottom: 0.75rem;
+    }
+    .page-intro p {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+    }
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1fr 1.3fr;
+      gap: 3rem;
+    }
+    @media (max-width: 768px) {
+      .contact-layout {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+    }
+    .direct-details {
+      display: flex;
+      flex-direction: column;
+      gap: 1.75rem;
+    }
+    .detail-card {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.5rem;
+    }
+    .detail-card h2 {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+    }
+    .detail-card p, .detail-card a {
+      font-size: 1.05rem;
+      font-weight: 500;
+    }
+    .form-card {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 2rem;
+    }
+    .form-group {
+      margin-bottom: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    label {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text-main);
+    }
+    input, select, textarea {
+      width: 100%;
+      background-color: #0f172a;
+      border: 1px solid var(--border);
+      color: var(--text-main);
+      padding: 0.75rem 1rem;
+      border-radius: 6px;
+      font-family: inherit;
+      font-size: 0.95rem;
+      outline: none;
+      transition: border-color 0.2s ease;
+    }
+    input:focus, select:focus, textarea:focus {
+      border-color: var(--accent);
+    }
+    textarea {
+      resize: vertical;
+      min-height: 140px;
+    }
+    .btn {
+      display: inline-block;
+      width: 100%;
+      padding: 0.85rem 1.5rem;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 1rem;
+      background-color: var(--accent);
+      color: #0f172a;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+    .btn:hover {
+      background-color: var(--accent-hover);
+    }
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2.5rem 1.5rem;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.875rem;
+    }
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Global Navigation -->
+  <header>
+    <div class="brand">Nnamdi Amuchie</div>
+    <nav aria-label="Main Navigation">
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-intro" aria-labelledby="contact-heading">
+      <h1 id="contact-heading">Get in Touch</h1>
+      <p>
+        Whether you are seeking rigorous AI code/output evaluation, full-stack application development, or technical curriculum training, reach out directly or send an inquiry below.
+      </p>
+    </section>
+
+    <div class="contact-layout">
+      <!-- Direct Contact Channels -->
+      <aside class="direct-details" aria-label="Direct Contact Information">
+        <div class="detail-card">
+          <h2>Direct Email</h2>
+          <a href="mailto:namdiamuchie@gmail.com">namdiamuchie@gmail.com</a>
+        </div>
+
+        <div class="detail-card">
+          <h2>Agency Platform</h2>
+          <a href="https://ultimaspark.com" target="_blank" rel="noopener noreferrer">ultimaspark.com</a>
+        </div>
+
+        <div class="detail-card">
+          <h2>Social &amp; Updates</h2>
+          <a href="https://x.com/nadinhocrypto" target="_blank" rel="noopener noreferrer">x.com/nadinhocrypto</a>
+        </div>
+
+        <div class="detail-card">
+          <h2>Curriculum Vitae</h2>
+          <p><a href="../assets/docs/Nnamdi-Amuchie-Resume.pdf" download>Download Resume (PDF)</a></p>
+        </div>
+      </aside>
+
+      <!-- Inquiry Form -->
+      <section class="form-card" aria-labelledby="form-heading">
+        <h2 id="form-heading" style="font-size: 1.25rem; margin-bottom: 1.5rem; color: var(--text-main);">Send a Message</h2>
+        <form action="mailto:namdiamuchie@gmail.com" method="post" enctype="text/plain">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="First and last name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="name@domain.com" required>
+          </div>
+
+          <div class="form-group">
+            <label for="interest">Inquiry Type</label>
+            <select id="interest" name="interest">
+              <option value="ai-evaluation">AI Output / Code Evaluation &amp; Auditing</option>
+              <option value="fullstack-dev">Full-Stack SaaS / Web Development</option>
+              <option value="training">Technical Instruction &amp; Academy Cohorts</option>
+              <option value="general">General Collaboration</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Project Details or Inquiry</label>
+            <textarea id="message" name="message" placeholder="Describe the project, scope, or evaluation needs..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn">Send Inquiry</button>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <!-- Global Footer -->
+  <footer>
+    <div class="footer-links">
+      <a href="mailto:namdiamuchie@gmail.com">namdiamuchie@gmail.com</a>[cite: 1]
+      <a href="https://ultimaspark.com" target="_blank" rel="noopener noreferrer">ultimaspark.com</a>[cite: 1]
+      <a href="https://x.com/nadinhocrypto" target="_blank" rel="noopener noreferrer">x.com/nadinhocrypto</a>[cite: 1]
+      <a href="../assets/docs/Nnamdi-Amuchie-Resume.pdf" download>Resume (PDF)</a>
+    </div>
+    <p>&copy; 2026 Nnamdi Amuchie. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

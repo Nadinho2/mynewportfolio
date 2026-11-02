@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Projects, SaaS systems, and AI evaluation case studies by Nnamdi Amuchie.">
+  <title>Projects &amp; Systems | Nnamdi Amuchie</title>
+  <link rel="stylesheet" href="../assets/styles/main.css">
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card-bg: #1e293b;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --accent: #38bdf8;
+      --accent-hover: #0ea5e9;
+      --border: #334155;
+      --badge-bg: rgba(56, 189, 248, 0.12);
+      --badge-border: rgba(56, 189, 248, 0.25);
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text-main);
+      line-height: 1.6;
+    }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+    a:hover {
+      color: var(--accent-hover);
+    }
+    header {
+      border-bottom: 1px solid var(--border);
+      padding: 1.25rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      background-color: rgba(15, 23, 42, 0.95);
+      backdrop-filter: blur(8px);
+      z-index: 100;
+    }
+    .brand {
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: var(--text-main);
+    }
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 1.5rem;
+    }
+    nav a {
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+    nav a:hover, nav a.active {
+      color: var(--text-main);
+    }
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem 5rem;
+    }
+    .page-intro {
+      margin-bottom: 3.5rem;
+      max-width: 750px;
+    }
+    .page-intro h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.75rem;
+      line-height: 1.2;
+    }
+    .page-intro p {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+    }
+    .projects-container {
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+    }
+    .project-card {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+    .project-title {
+      font-size: 1.5rem;
+      color: var(--text-main);
+    }
+    .project-category {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--accent);
+      background-color: var(--badge-bg);
+      border: 1px solid var(--badge-border);
+      padding: 0.25rem 0.6rem;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+    .project-description {
+      color: var(--text-muted);
+      font-size: 1rem;
+    }
+    .project-highlights {
+      list-style-type: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      padding-left: 0;
+    }
+    .project-highlights li {
+      font-size: 0.925rem;
+      color: var(--text-muted);
+      position: relative;
+      padding-left: 1.25rem;
+    }
+    .project-highlights li::before {
+      content: "▹";
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+    }
+    .tech-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+    }
+    .tech-tag {
+      font-size: 0.75rem;
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--text-main);
+      padding: 0.3rem 0.65rem;
+      border-radius: 4px;
+      border: 1px solid var(--border);
+    }
+    .project-actions {
+      display: flex;
+      gap: 1rem;
+      padding-top: 0.5rem;
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2.5rem 1.5rem;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.875rem;
+    }
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Global Navigation (Relative path points up to root index.html) -->
+  <header>
+    <div class="brand">Nnamdi Amuchie</div>
+    <nav aria-label="Main Navigation">
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-intro" aria-labelledby="page-title">
+      <h1 id="page-title">Projects &amp; Systems</h1>
+      <p>
+        A catalog of production web applications, LLM-integrated automation pipelines, and code auditing frameworks built and evaluated across UltimaSpark Agency and Academy.
+      </p>
+    </section>
+
+    <section class="projects-container" aria-label="Projects Catalog">
+
+      <!-- Case Study 1: SparkBooks -->
+      <article class="project-card">
+        <div class="project-header">
+          <div>
+            <h2 class="project-title">SparkBooks AI Bookkeeping Pipeline</h2>
+          </div>
+          <span class="project-category">AI Pipeline &amp; Production QA</span>
+        </div>
+        <p class="project-description">
+          An automated bookkeeping system that allows business owners to record financial transactions via WhatsApp voice notes and text messages, audited for data integrity before database ingestion.
+        </p>
+        <ul class="project-highlights">
+          <li>Transcribes voice notes using OpenAI Whisper and parses structured financial entries via DeepSeek V4 Pro.</li>
+          <li>Enforces pre-confirmation human-in-the-loop and automated auditing to eliminate hallucinations, mis-transcriptions, and schema mismatches.</li>
+          <li>Secured with Supabase Row-Level Security (RLS) to ensure multi-tenant ledger isolation.</li>
+        </ul>
+        <div class="tech-stack">
+          <span class="tech-tag">DeepSeek V4 Pro</span>
+          <span class="tech-tag">OpenAI Whisper</span>
+          <span class="tech-tag">WhatsApp API</span>
+          <span class="tech-tag">Next.js</span>
+          <span class="tech-tag">TypeScript</span>
+          <span class="tech-tag">Supabase</span>
+        </div>
+        <div class="project-actions">
+          <a href="project-detail.html">Read Full Deep-Dive Case Study &rarr;</a>
+        </div>
+      </article>
+
+      <!-- Case Study 2: UltimaSpark Academy Code Audit -->
+      <article class="project-card">
+        <div class="project-header">
+          <div>
+            <h2 class="project-title">AI Code Evaluation &amp; Curriculum Framework</h2>
+          </div>
+          <span class="project-category">Education &amp; Code Review</span>
+        </div>
+        <p class="project-description">
+          A rationale-first evaluation standard created to review code generated by 100+ students across 6 cohorts using AI pair programmers.
+        </p>
+        <ul class="project-highlights">
+          <li>Identified recurring failure modes in tools like Cursor, Lovable, and Trae AI—specifically ambiguous Row-Level Security configurations and accidentally exposed service-role keys.</li>
+          <li>Provided structured written feedback clarifying logic flaws, root causes, and security implications rather than generic surface critique.</li>
+          <li>Iteratively refined curriculum rubrics based on real-world AI coding vulnerabilities.</li>
+        </ul>
+        <div class="tech-stack">
+          <span class="tech-tag">Code Review</span>
+          <span class="tech-tag">Supabase RLS</span>
+          <span class="tech-tag">Cursor</span>
+          <span class="tech-tag">Lovable</span>
+          <span class="tech-tag">Trae AI</span>
+          <span class="tech-tag">Technical Writing</span>
+        </div>
+        <div class="project-actions">
+          <a href="https://ultimaspark.com" target="_blank" rel="noopener noreferrer">Visit Academy Platform &rarr;</a>
+        </div>
+      </article>
+
+      <!-- Case Study 3: SparkLeads & SparkAds -->
+      <article class="project-card">
+        <div class="project-header">
+          <div>
+            <h2 class="project-title">SparkLeads &amp; SparkAds Software Suite</h2>
+          </div>
+          <span class="project-category">Full-Stack SaaS</span>
+        </div>
+        <p class="project-description">
+          Proprietary SaaS applications engineered under the UltimaSpark Agency to manage lead generation pipelines and high-converting marketing campaigns.
+        </p>
+        <ul class="project-highlights">
+          <li>Built scalable full-stack architectures utilizing Next.js app router and typed Supabase database connections.</li>
+          <li>Converted AI-generated feature breakdowns into structured documentation and production-ready code modules.</li>
+          <li>Maintained strict UI and business logic testing standards across all user touchpoints.</li>
+        </ul>
+        <div class="tech-stack">
+          <span class="tech-tag">Next.js</span>
+          <span class="tech-tag">TypeScript</span>
+          <span class="tech-tag">Supabase</span>
+          <span class="tech-tag">Tailwind CSS</span>
+          <span class="tech-tag">PostgreSQL</span>
+        </div>
+        <div class="project-actions">
+          <a href="https://ultimaspark.com" target="_blank" rel="noopener noreferrer">View Agency Products &rarr;</a>
+        </div>
+      </article>
+
+      <!-- Case Study 4: 20+ Production Applications -->
+      <article class="project-card">
+        <div class="project-header">
+          <div>
+            <h2 class="project-title">Production SaaS &amp; E-Commerce Portfolio</h2>
+          </div>
+          <span class="project-category">Client Deliverables &amp; QA</span>
+        </div>
+        <p class="project-description">
+          Over 20 production web platforms shipped for commercial clients, combining accelerated AI-assisted drafting with rigorous manual QA.
+        </p>
+        <ul class="project-highlights">
+          <li>Audited "vibe-coded" solutions for boundary-case errors, performance bottlenecks, and responsive layout fidelity.</li>
+          <li>Delivered clean, maintainable TypeScript codebases with zero tolerance for unvetted third-party vulnerabilities.</li>
+          <li>Integrated custom authentication, payment gateways, and backend webhooks.</li>
+        </ul>
+        <div class="tech-stack">
+          <span class="tech-tag">Next.js</span>
+          <span class="tech-tag">TypeScript</span>
+          <span class="tech-tag">Supabase</span>
+          <span class="tech-tag">API Integration</span>
+          <span class="tech-tag">Manual QA</span>
+        </div>
+        <div class="project-actions">
+          <a href="contact.html">Request Client Demos &rarr;</a>
+        </div>
+      </article>
+
+    </section>
+  </main>
+
+  <!-- Global Footer -->
+  <footer>
+    <div class="footer-links">
+      <a href="mailto:namdiamuchie@gmail.com">namdiamuchie@gmail.com</a>
+      <a href="https://ultimaspark.com" target="_blank" rel="noopener noreferrer">ultimaspark.com</a>
+      <a href="https://x.com/nadinhocrypto" target="_blank" rel="noopener noreferrer">x.com/nadinhocrypto</a>
+      <a href="../assets/docs/Nnamdi-Amuchie-Resume.pdf" download>Resume (PDF)</a>
+    </div>
+    <p>&copy; 2026 Nnamdi Amuchie. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
